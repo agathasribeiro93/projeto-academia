@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Academia AR</title>
+</head>
+<body>
+    <header>
+         
+
+        <nav>            
+            <ul>
+                <a href="index.html"><img  class="logo" src="./imagem/img-rodape.png" alt=""></a> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ondeestamos.html">Unidades</a></li>
+                <li><a href="planos.html">Nossos planos</a></li>
+                <li><a href="profissionais.html">Profissionais</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+   <div id="formulario">
+        <form id="form">
+            <h2>Cadastro</h2>
+
+            <div class="secao">
+                <label for="nome">Nome:</label>
+                <input type="name" id="nome" placeholder="Digite seu nome completo" data-required>
+            </div>
+            <div class="secao">
+                <label for="rg">RG:</label>
+                <input type="number" id="rg" placeholder="__.___.___-_" data-min-length="9" data-max-length="9" data-required>
+            </div>
+            <div class="secao">
+                <label for="cep">CEP:</label>
+                <input type="number" id="cep" placeholder="_____-___" data-min-length="8" data-min-length="8" data-required>
+            </div>
+            
+            <div id="botaoCep">
+                <input type="checkbox" id="Ncep">
+                <label for="Ncep" class="Ncep">Não sei meu CEP</label>
+            </div>
+            
+            
+            <fieldset id="local" class="secao">
+                <legend class="legend">Endereço</legend>
+                
+                <div class="secao">
+                    <label for="estados">Estado:</label>
+                    <select name="estados" id="estados">
+                            <option value="selecione">Selecione</option>
+                            
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso de Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande de Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            
+                    </select>
+                </div>
+                <div class="secao">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade" data-min-length="3" data-required>
+                </div>
+                <div class="secao">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro" data-required>
+                </div>
+                <div class="secao">
+                    <label for="rua">Rua:</label>
+                    <input type="text" name="rua" id="rua" placeholder="Digite sua rua" data-required data-min-length="3">
+                </div>
+                <div class="secao">
+                    <label for="numero">Número:</label>
+                    <input type="number" name="numero" id="numero" placeholder="Digite seu número" data-min-length="1" data-required>
+                </div>           
+                <div class="secao">
+                    <label for="compl">Complemento: <abbr class="abbr">(opcional)</abbr></label>
+                    <input type="text" id="compl" placeholder="Digite o complemento">
+                </div>
+
+                <div class="buscar">
+                    <button id="buscar">Buscar CEP</button>
+                </div>
+            </fieldset>
+
+
+            <div class="secao">
+                <label for="emai">E-mail:</label>
+                <input type="email" id="e-mail" placeholder="Digite seu e-mail" data-email-validacao data-required>
+            </div>
+            <div class="secao">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password1" placeholder="Digite sua senha" data-min-length="8" data-max-length="20" data-required>
+            </div>
+            <div class="secao">
+                <label for="password">Confirme sua senha:</label>
+                <input type="password" name="password" id="password2" placeholder="Confirme sua senha" data-min-length="8" data-max-length="20" data-equal="password" data-required>
+            </div>
+
+            <a href="index.html"><button type="submit" id="enviar">Enviar</button></a>  
+
+            </a>
+        </form>
+    </div>   
+    <p class="erro template">Mensagem de erro</p>
+ </div>
+    <footer>
+        <a href="index.html"><img class="img-rodape" src="./imagem/rodape.jpeg" alt=""></a>
+    </footer>      
+    <script src="./cadastro.js"></script>
+</body>
+</html>
